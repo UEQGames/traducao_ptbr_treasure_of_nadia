@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "OFFLINE_RELEASE_VALIDATION_PASS",
+  "validated_at": "2026-08-31T22:14:31.6760862-03:00",
+  "release": "Treasure_of_Nadia_PTBR_v1.0.0",
+  "delta_roundtrip": {
+    "comparison": "byte_identical_to_final_installed_translation",
+    "files": 160,
+    "result": "PASS"
+  },
+  "current_game_read_only_verify": {
+    "result": "PASS",
+    "writes": false,
+    "files": 160,
+    "unknown": 0,
+    "state": "TARGET"
+  },
+  "windows_powershell_5_1_fixture": {
+    "install": "PASS_160_FILES",
+    "source_verify": "PASS",
+    "uninstall": "PASS_160_FILES",
+    "source_verify_after_rollback": "PASS",
+    "target_verify": "PASS"
+  },
+  "runtime": {
+    "installer_runtime_test": "NOT_PERFORMED",
+    "translation_runtime_evidence": "Existing user-manual project validation; delta targets are byte-identical to final installation",
+    "game_launched_by_builder": false
+  },
+  "safety": {
+    "target_hash_gate": true,
+    "patch_format": "COPY_INSERT_V1_GZIP",
+    "rollback": true,
+    "full_game_files_in_payload": false,
+    "backup": true,
+    "source_hash_gate": true
+  }
+}
