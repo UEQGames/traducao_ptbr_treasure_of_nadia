@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#16140d">
+<meta name="description" content="Treasure of Nadia em português brasileiro. Baixe gratuitamente a tradução PT-BR v1.0.0 para Windows, com diálogos, escolhas, itens e menus traduzidos.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Treasure of Nadia PT-BR | Tesouros, mistérios e tentações">
+<meta property="og:description" content="Uma aventura arqueológica cheia de mistérios e confusões adultas, agora em português brasileiro. Tradução de fã da UEQGames.">
+<meta property="og:url" content="https://ueqgames.github.io/traducao_ptbr_treasure_of_nadia/">
+<link rel="canonical" href="https://ueqgames.github.io/traducao_ptbr_treasure_of_nadia/">
+<title>Treasure of Nadia PT-BR — Tradução Brasileira | UEQGames</title>
+
+<style>
+:root {
+  color-scheme:dark;
+  --bg:#12130d;
+  --panel:#22251a;
+  --panel2:#2c2d1c;
+  --gold:#f3c26c;
+  --sand:#e4cc9b;
+  --olive:#98ad70;
+  --red:#e98565;
+  --text:#f6eedb;
+  --muted:#c8bda3;
+  --border:#756441;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif;
+  overflow-x:hidden;
+}
+a{color:var(--gold)}
+a:focus-visible{
+  outline:3px solid var(--gold);
+  outline-offset:4px;
+}
+.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
+header{
+  position:sticky;
+  top:0;
+  z-index:30;
+  background:#15150feF;
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid #73623e;
+}
+nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+  padding:15px 0;
+}
+.brand{
+  text-decoration:none;
+  font-size:1.08rem;
+  font-weight:900;
+  letter-spacing:.14em;
+  color:#fff0d0;
+}
+.brand span{color:var(--gold)}
+nav .links{
+  display:flex;gap:20px;flex-wrap:wrap;
+}
+nav .links a{
+  text-decoration:none;
+  font-weight:650;
+  color:#e2d2af;
+  font-size:.87rem;
+}
+nav .links a:hover{color:var(--gold)}
+.age{
+  padding:4px 10px;
+  border:1px solid var(--red);
+  border-radius:5px;
+  color:#ffab88;
+  font-size:.73rem;
+  font-weight:900;
+}
+.ribbon{
+  text-align:center;
+  background:linear-gradient(90deg,#967037,#f2c36d,#967037);
+  color:#251c0d;
+  font-size:.7rem;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  padding:9px 12px;
+}
+.hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 75% 30%,#98732b35,transparent 45%),
+    radial-gradient(ellipse at 15% 80%,#395c3a50,transparent 55%),
+    linear-gradient(145deg,#252719,#10130f);
+  padding:95px 0 110px;
+}
+.hero:before{
+  content:"";
+  position:absolute;inset:0;z-index:-1;
+  background:
+    repeating-linear-gradient(
+      105deg,transparent 0,transparent 52px,
+      #d3ad6511 53px,transparent 54px
+    );
+  opacity:.65;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:40px;
+  align-items:center;
+}
+.overline{
+  display:inline-block;
+  color:var(--gold);
+  font-size:.77rem;
+  font-weight:900;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.stamp{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid #907949;
+  background:#302c1c;
+  padding:7px 13px;
+  border-radius:5px;
+  font-size:.78rem;
+  color:#eddbaf;
+  margin-bottom:18px;
+}
+.stamp:before{
+  content:"◆";
+  color:var(--gold);
+}
+h1{
+  font-size:clamp(3.5rem,7.5vw,6.5rem);
+  font-weight:1000;
+  line-height:.97;
+  letter-spacing:-.075em;
+  margin:15px 0 20px;
+  color:#f4d490;
+  text-shadow:0 5px 0 #533d1f;
+}
+h1 span{display:block;color:#fff3d8}
+.hero h2{
+  margin:0 0 20px;
+  font-size:clamp(1.25rem,3vw,1.9rem);
+  line-height:1.3;
+}
+.hero p{
+  color:#dbd2bb;
+  max-width:625px;
+  font-size:1.04rem;
+}
+.hero strong{color:var(--gold)}
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:13px 23px;
+  border-radius:7px;
+  text-decoration:none;
+  font-weight:900;
+  font-size:.93rem;
+  transition:transform .2s,box-shadow .2s;
+  text-align:center;
+}
+.btn:hover{transform:translateY(-3px)}
+.main-btn{
+  color:#251a09;
+  background:linear-gradient(110deg,#f7d586,#d99a42);
+  box-shadow:0 0 26px #d59b4740;
+}
+.main-btn:hover{box-shadow:0 0 36px #d59b4775}
+.alt-btn{
+  color:#f1dfba;
+  background:#302c1e;
+  border:1px solid #96804f;
+}
+.alt-btn:hover{box-shadow:0 0 18px #c4a0663d}
+.tags{
+  display:flex;gap:9px;
+  flex-wrap:wrap;
+  margin-top:26px;
+}
+.tag{
+  font-size:.75rem;
+  font-weight:800;
+  padding:5px 11px;
+  border:1px solid #8e774b;
+  background:#312d20;
+  color:#e9d7ac;
+  border-radius:5px;
+}
+.tag.adult{color:#ffc0a1;border-color:#c77a5c}
+.tag.safe{color:#b8e9b2;border-color:#718b61}
+
+/* MAPA ILUSTRATIVO */
+.map-scene{
+  position:relative;
+  width:min(100%,420px);
+  aspect-ratio:1;
+  margin:auto;
+  background:
+    radial-gradient(ellipse at 30% 30%,#d8b979,#927442 75%);
+  border:12px solid #6d522c;
+  border-radius:50%;
+  box-shadow:
+    inset 0 0 40px #503c1d,
+    0 18px 60px #0008,
+    0 0 0 2px #bc9c5d;
+  display:grid;
+  place-items:center;
+  transform:rotate(-5deg);
+}
+.map-scene:after{
+  content:"";
+  position:absolute;inset:8%;
+  border:2px dashed #604c2e;
+  border-radius:50%;
+  pointer-events:none;
+}
+.map-center{
+  position:absolute;
+  width:70%;
+  height:70%;
+  background:
+    radial-gradient(ellipse at 50% 50%,#5b783f55,transparent 55%);
+  border-radius:50%;
+}
+.map-river{
+  position:absolute;
+  width:65%;height:50%;
+  border-left:22px solid #658e8f99;
+  border-radius:60%;
+  transform:rotate(35deg);
+}
+.map-trail{
+  position:absolute;
+  width:57%;height:55%;
+  border:4px dashed #654526;
+  border-left:0;border-bottom:0;
+  border-radius:55%;
+  transform:rotate(20deg);
+}
+.map-x{
+  position:absolute;
+  font:1000 6.2rem/1 Georgia,serif;
+  color:#9c3521;
+  text-shadow:2px 3px #49261b;
+  transform:translate(75px,35px) rotate(14deg);
+}
+.map-compass{
+  position:absolute;
+  top:13%;left:14%;
+  font:700 2.6rem Georgia,serif;
+  color:#403b23;
+  transform:rotate(5deg);
+}
+.map-caption{
+  position:absolute;
+  left:12%;bottom:15%;
+  font:italic 800 1.1rem Georgia,serif;
+  color:#543c22;
+  transform:rotate(-10deg);
+}
+.map-note{
+  position:absolute;
+  right:-5%;top:-5%;
+  color:#f5d796;
+  border:2px solid #c39652;
+  background:#372619;
+  border-radius:8px;
+  padding:13px 15px;
+  max-width:180px;
+  font-size:.72rem;
+  line-height:1.4;
+  transform:rotate(11deg);
+  box-shadow:0 8px 25px #0006;
+}
+.map-note strong{display:block;color:#ffd77f}
+.section{
+  padding:85px 0;
+  scroll-margin-top:100px;
+}
+.section.alt{
+  background:#1b2018;
+  border-block:1px solid #474c32;
+}
+.section h2{
+  font-size:clamp(2rem,4.5vw,3rem);
+  letter-spacing:-.04em;
+  line-height:1.15;
+  margin:12px 0 18px;
+}
+.section h2 em{color:var(--gold);font-style:normal}
+.lead{
+  color:var(--muted);
+  max-width:790px;
+  margin-bottom:30px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+.card{
+  background:linear-gradient(160deg,#2c301f,#202318);
+  border:1px solid #6e6847;
+  padding:27px;
+  border-radius:11px;
+  position:relative;
+  overflow:hidden;
+}
+.card:before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+  background:linear-gradient(90deg,#d4a14c,#9caa68);
+}
+.card .num{
+  color:#edc379;
+  font-size:.75rem;
+  letter-spacing:.15em;
+  font-weight:900;
+}
+.card h3{margin:11px 0;color:#fff0d3}
+.card p{color:#c8c4ae;margin:0;font-size:.94rem}
+.quote{
+  margin-top:30px;
+  padding:23px 26px;
+  background:#302a1c;
+  border-left:4px solid var(--gold);
+  border-radius:5px;
+  color:#fbe1b0;
+  font-size:1.1rem;
+}
+.install-layout{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:24px;
+  align-items:start;
+}
+.steps{
+  counter-reset:step;
+  display:grid;
+  gap:13px;
+}
+.step{
+  counter-increment:step;
+  display:grid;
+  grid-template-columns:46px 1fr;
+  gap:17px;
+  background:#242719;
+  padding:17px;
+  border:1px solid #666141;
+  border-radius:9px;
+}
+.step:before{
+  content:counter(step,decimal-leading-zero);
+  width:44px;height:44px;
+  display:grid;place-items:center;
+  color:#ffe09e;
+  border:1px solid #967b4a;
+  background:#473b23;
+  border-radius:6px;
+  font-weight:900;
+}
+.step strong{display:block;color:#fff0d8}
+.step p{margin:4px 0;color:#cfc6b0}
+code{
+  background:#13180f;
+  color:#dbebaa;
+  padding:4px 7px;
+  border-radius:4px;
+  overflow-wrap:anywhere;
+}
+.side{
+  background:#302c1e;
+  border:1px solid #8b774c;
+  border-radius:12px;
+  padding:25px;
+}
+.side h3{color:var(--gold);margin-top:0}
+.side p{color:#e1d2b6}
+.warning{
+  background:#3b291c;
+  border:1px solid #a56d44;
+  border-radius:9px;
+  padding:20px;
+  margin-top:18px;
+  color:#fbe0b9;
+}
+.download{
+  border:1px solid #ac8650;
+  border-radius:18px;
+  text-align:center;
+  padding:55px 25px;
+  background:
+    radial-gradient(ellipse at 50% 0%,#a17c3a48,transparent 65%),
+    linear-gradient(140deg,#37301e,#1c241a);
+  box-shadow:0 0 60px #d2a54b10;
+}
+.download h2{
+  max-width:780px;
+  margin:16px auto;
+}
+.download p{
+  max-width:700px;
+  color:#daceb5;
+  margin:0 auto 20px;
+}
+.download .buttons{justify-content:center}
+.fine{font-size:.79rem;color:#b5ad96}
+footer{
+  padding:35px 0;
+  border-top:1px solid #665937;
+  color:#c6b99b;
+  font-size:.85rem;
+}
+footer .wrap{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:22px;
+}
+footer p{max-width:490px;margin:0}
+@media(max-width:850px){
+  .hero-grid{grid-template-columns:1fr}
+  .map-scene{width:min(80%,360px)}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:620px){
+  nav{justify-content:center}
+  .links{justify-content:center}
+  .hero{padding:65px 0 80px}
+  .section{padding:55px 0}
+  .grid,.install-layout{grid-template-columns:1fr}
+  .buttons .btn{width:100%}
+  .map-scene{width:min(83%,310px)}
+  .map-note{right:-13%;top:-8%;font-size:.65rem}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn{transition:none}
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"Treasure of Nadia - Tradução PT-BR",
+  "applicationCategory":"GameApplication",
+  "operatingSystem":"Windows",
+  "softwareVersion":"1.0.0",
+  "inLanguage":"pt-BR",
+  "isAccessibleForFree":true,
+  "description":"Tradução gratuita e não oficial de Treasure of Nadia para português brasileiro, distribuída como patches delta.",
+  "url":"https://ueqgames.github.io/traducao_ptbr_treasure_of_nadia/",
+  "downloadUrl":"https://github.com/UEQGames/traducao_ptbr_treasure_of_nadia/releases/download/v1.0.0/Treasure_of_Nadia_PTBR_v1.0.0.zip",
+  "author":{"@type":"Organization","name":"UEQGames"}
+}
+</script>
+</head>
+
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#inicio">UEQ<span>GAMES</span></a>
+    <div class="links">
+      <a href="#aventura">A aventura</a>
+      <a href="#traducao">Tradução</a>
+      <a href="#instalar">Instalação</a>
+      <a href="#download">Download</a>
+    </div>
+    <span class="age">18+</span>
+  </nav>
+</header>
+
+<div class="ribbon">
+  Diário de expedição nº 001 — tesouros, mistérios e tentações em português brasileiro
+</div>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="stamp">Arquivo confidencial • Cape Vedra</div>
+      <div class="overline">Uma tradução de fã da UEQGames</div>
+      <h1>TREASURE <span>OF NADIA</span></h1>
+      <h2>
+        Caçando relíquias antigas.
+        Encontrando problemas modernos.
+        E colecionando tentações pelo caminho.
+      </h2>
+      <p>
+        Um jovem aventureiro chega a Cape Vedra em busca de
+        tesouros e acaba envolvido em mistérios, perigos e
+        relacionamentos que definitivamente não estavam
+        no manual de arqueologia.
+      </p>
+      <p>
+        Explore ruínas, descubra segredos, resolva enigmas
+        e acompanhe as confusões da cidade em
+        <strong>português brasileiro</strong>.
+      </p>
+      <div class="buttons">
+        <a class="btn main-btn" href="https://github.com/UEQGames/traducao_ptbr_treasure_of_nadia/releases/download/v1.0.0/Treasure_of_Nadia_PTBR_v1.0.0.zip">
+          ↓ Baixar tradução v1.0.0
+        </a>
+        <a class="btn alt-btn" href="#instalar">
+          Manual do explorador
+        </a>
+      </div>
+      <div class="tags">
+        <span class="tag adult">18+ • Aventura adulta</span>
+        <span class="tag safe">Tradução 1.0.0</span>
+        <span class="tag">Windows</span>
+        <span class="tag">Download gratuito</span>
+      </div>
+    </div>
+
+    <div class="map-scene" role="img" aria-label="Ilustração de um mapa antigo com trilha, bússola e um X marcando um tesouro">
+      <div class="map-center"></div>
+      <div class="map-river"></div>
+      <div class="map-trail"></div>
+      <div class="map-compass">✦</div>
+      <div class="map-x">X</div>
+      <div class="map-caption">Cape Vedra</div>
+      <div class="map-note">
+        <strong>ALERTA DE EXPEDIÇÃO</strong>
+        Tesouros encontrados: ?<br>
+        Segredos descobertos: ?<br>
+        Problemas amorosos: muitos
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="aventura">
+  <div class="wrap">
+    <div class="overline">Expedição // 001</div>
+    <h2>Uma cidade repleta de <em>segredos e segundas intenções.</em></h2>
+    <p class="lead">
+      Treasure of Nadia mistura caça ao tesouro, enigmas,
+      mistério, exploração tropical e narrativa adulta.
+      Em Cape Vedra, cada descoberta parece abrir caminho
+      para outro problema — ou outra tentação.
+    </p>
+    <p>
+      A tradução brasileira foi criada para preservar
+      diálogos, escolhas, personalidade dos personagens
+      e termos recorrentes, permitindo acompanhar
+      melhor a história sem ficar decifrando cada frase.
+    </p>
+    <div class="quote">
+      “Ele só queria seguir os passos do pai e encontrar
+      alguns tesouros. A cidade inteira parece ter outros planos.”
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="traducao">
+  <div class="wrap">
+    <div class="overline">Inventário da expedição // 002</div>
+    <h2>O que tem dentro <em>desse baú?</em></h2>
+    <p class="lead">
+      A versão 1.0.0 reúne uma revisão extensa dos
+      textos do jogo. O projeto consolidou 33.809 rotas
+      textuais e distribui as alterações por patches delta.
+    </p>
+
+    <div class="grid">
+      <article class="card">
+        <div class="num">01 / NARRATIVA</div>
+        <h3>Diálogos e escolhas</h3>
+        <p>
+          Falas, decisões e interações traduzidas
+          com atenção ao contexto e aos personagens.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">02 / EXPLORAÇÃO</div>
+        <h3>Itens e descobertas</h3>
+        <p>
+          Nomes de itens e termos recorrentes,
+          com revisão de consistência.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">03 / INTERFACE</div>
+        <h3>Menus e mensagens</h3>
+        <p>
+          Grande parte dos menus, mensagens,
+          opções e elementos textuais da interface.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">04 / QUALIDADE</div>
+        <h3>Revisão editorial</h3>
+        <p>
+          Terminologia, personalidade dos personagens,
+          resíduos em inglês e ajustes finais.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">05 / SEGURANÇA</div>
+        <h3>Patch com proteção</h3>
+        <p>
+          Verificação por SHA-256, backups e
+          restauração se ocorrer falha na instalação.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">06 / DISTRIBUIÇÃO</div>
+        <h3>Somente a tradução</h3>
+        <p>
+          O pacote contém patches delta.
+          Não inclui uma cópia do jogo.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="instalar">
+  <div class="wrap">
+    <div class="overline">Manual do explorador // 003</div>
+    <h2>Antes de entrar na tumba, <em>prepare o equipamento.</em></h2>
+    <p class="lead">
+      A instalação é feita com o pacote oficial da tradução.
+      Primeiro verificamos se o jogo é compatível;
+      só depois aplicamos as alterações.
+    </p>
+
+    <div class="install-layout">
+      <div class="steps">
+        <div class="step">
+          <div>
+            <strong>Feche Treasure of Nadia</strong>
+            <p>
+              Nada de mexer nos artefatos enquanto
+              a expedição ainda está acontecendo.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div>
+            <strong>Baixe e extraia o ZIP</strong>
+            <p>
+              Use o pacote da Release v1.0.0.
+              Extraia todo o conteúdo para uma pasta.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div>
+            <strong>Verifique sua instalação</strong>
+            <p>
+              Execute <code>1_VERIFICAR_PTBR.cmd</code>.
+              A ferramenta confere os arquivos do jogo
+              antes de permitir a tradução.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div>
+            <strong>Instale a tradução</strong>
+            <p>
+              Se a verificação for aprovada, execute
+              <code>2_INSTALAR_PTBR.cmd</code>.
+              Quando solicitado, informe a pasta
+              principal do jogo.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div>
+            <strong>Confirme a pasta correta</strong>
+            <p>
+              A pasta informada deve conter
+              <code>www\data\System.json</code>.
+              O instalador fará o backup e aplicará
+              os patches compatíveis.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div>
+            <strong>Volte à aventura</strong>
+            <p>
+              Abra o jogo normalmente e continue
+              explorando Cape Vedra em português.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="side">
+          <h3>▣ Ficha técnica</h3>
+          <p><strong>Tradução:</strong> 1.0.0</p>
+          <p><strong>Plataforma:</strong> Windows</p>
+          <p><strong>Engine:</strong> RPG Maker MV</p>
+          <p><strong>Arquivos tratados:</strong> 160</p>
+          <p><strong>Método:</strong> patches delta</p>
+
+          <p>
+            <a href="https://github.com/UEQGames/traducao_ptbr_treasure_of_nadia/blob/main/docs/INSTALL.md">
+              Guia completo de instalação →
+            </a>
+          </p>
+          <p>
+            <a href="https://github.com/UEQGames/traducao_ptbr_treasure_of_nadia/blob/main/docs/COMPATIBILITY.md">
+              Verificar compatibilidade →
+            </a>
+          </p>
+        </div>
+
+        <div class="warning">
+          <strong>⚠ Cuidado com armadilhas!</strong>
+          <p>
+            A tradução exige uma versão compatível
+            do jogo. Se os arquivos não corresponderem
+            aos hashes esperados, a instalação será
+            bloqueada por segurança.
+          </p>
+          <p>
+            Para desinstalar, utilize
+            <code>3_DESINSTALAR_PTBR.cmd</code>
+            com o mesmo pacote. Não é necessário
+            apagar os saves.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="cuidados">
+  <div class="wrap">
+    <div class="overline">Notas de campo // 004</div>
+    <h2>Nem toda relíquia deve ser <em>tocada.</em></h2>
+
+    <div class="grid">
+      <article class="card">
+        <div class="num">COMPATIBILIDADE</div>
+        <h3>Versão correta</h3>
+        <p>
+          O instalador só aplica alterações quando
+          os arquivos correspondem à versão suportada.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">LIMITAÇÕES</div>
+        <h3>Textos em imagens</h3>
+        <p>
+          Créditos, marcas e textos incorporados
+          a imagens podem permanecer no idioma original.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">PROTEÇÃO</div>
+        <h3>Plano de fuga</h3>
+        <p>
+          Backup dos arquivos, validação da instalação,
+          rollback em caso de falha e desinstalação.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="download">
+  <div class="wrap">
+    <div class="download">
+      <div class="overline">Tesouro encontrado // Expedição concluída</div>
+      <h2>O verdadeiro tesouro era a tradução que encontramos pelo caminho.</h2>
+      <p>
+        Baixe gratuitamente a versão PT-BR 1.0.0.
+        O arquivo vem diretamente da Release oficial
+        da UEQGames no GitHub.
+      </p>
+
+      <div class="buttons">
+        <a class="btn main-btn" href="https://github.com/UEQGames/traducao_ptbr_treasure_of_nadia/releases/download/v1.0.0/Treasure_of_Nadia_PTBR_v1.0.0.zip">
+          ↓ BAIXAR TRADUÇÃO PT-BR
+        </a>
+        <a class="btn alt-btn" href="https://github.com/UEQGames/traducao_ptbr_treasure_of_nadia/releases/tag/v1.0.0">
+          Ver Release v1.0.0
+        </a>
+      </div>
+
+      <p class="fine" style="margin-top:25px">
+        Projeto de fã, gratuito e não oficial.
+        Requer uma cópia legítima e compatível do jogo.
+      </p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>
+      <strong>UEQGames</strong><br>
+      Aventuras, traduções e projetos criados
+      por quem gosta de explorar até os cantos
+      mais suspeitos dos jogos.
+    </p>
+    <p>
+      Treasure of Nadia e seus conteúdos pertencem
+      aos respectivos titulares. Tradução independente,
+      sem afiliação ou endosso da NLT Media.
+      Conteúdo original destinado ao público adulto.
+    </p>
+    <p>
+      <a href="https://github.com/UEQGames/traducao_ptbr_treasure_of_nadia">
+        Repositório GitHub
+      </a><br>
+      <a href="https://github.com/UEQGames/traducao_ptbr_treasure_of_nadia/blob/main/LICENSE_NOTICE.md">
+        Avisos legais
+      </a><br>
+      <a href="https://github.com/UEQGames/traducao_ptbr_treasure_of_nadia/issues">
+        Relatar problema
+      </a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>
